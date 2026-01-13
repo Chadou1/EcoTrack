@@ -1,1 +1,21 @@
+EcoTrack - License Information
 
+This project is licensed under the GNU General Public License v3.0 or later (GPL-3.0+).
+
+You are free to:
+
+- Use: Run the software for any purpose.
+- Study: Examine the source code and understand how it works.
+- Share: Redistribute copies of the software.
+- Modify: Improve or adapt the software and distribute your changes under the same license.
+
+Conditions:
+
+- All copies and derivatives must be distributed under the same license (GPL v3+).
+- Source code must always be made available when distributing the software.
+- No warranty is provided with this software. The authors are not responsible for any damage or issues arising from its use.
+
+For full license text, visit: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+Authors: [Charles-Antoine Therville, Pasteur Douheret--Chousta ]
+Project: EcoTrack
