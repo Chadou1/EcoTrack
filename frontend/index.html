@@ -12,44 +12,7 @@
     <p class="subtitle">Simulateur d’impact écologique des choix quotidiens</p>
 
     <form id="ecoForm">
-        <section>
-            <h2>Transports</h2>
-            <select id="transport">
-                <option value="30">Voiture thermique</option>
-                <option value="15">Transports en commun</option>
-                <option value="5">Vélo / Marche</option>
-                <option value="25">Avion (occasionnel)</option>
-            </select>
-        </section>
-
-        <section>
-            <h2>Alimentation</h2>
-            <select id="food">
-                <option value="30">Riche en viande</option>
-                <option value="20">Mixte</option>
-                <option value="10">Végétarienne</option>
-            </select>
-        </section>
-
-        <section>
-            <h2>Usage numérique</h2>
-            <select id="digital">
-                <option value="20">Streaming vidéo</option>
-                <option value="15">Jeux vidéo</option>
-                <option value="10">Navigation internet</option>
-                <option value="12">Stockage cloud</option>
-            </select>
-        </section>
-
-        <section>
-            <h2>Logement / Énergie</h2>
-            <select id="energy">
-                <option value="30">Chauffage fossile</option>
-                <option value="20">Électricité standard</option>
-                <option value="10">Énergie renouvelable</option>
-            </select>
-        </section>
-
+        <div id="questionnaire"></div>
         <button type="submit">Calculer mon impact</button>
     </form>
 
@@ -57,6 +20,7 @@
         <h2>Résultats</h2>
         <div class="score" id="scoreValue"></div>
         <p id="interpretation"></p>
+        <div class="points" id="pointsSummary"></div>
         <div id="tips"></div>
     </div>
 </div>
