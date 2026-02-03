@@ -9,11 +9,12 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding: 40px 16px;
 }
 
 .container {
-    width: 420px;
+    width: min(960px, 100%);
     background: rgba(0, 0, 0, 0.55);
     border: 1px solid #2cff9a;
     border-radius: 16px;
@@ -30,37 +31,88 @@ body {
 h1 {
     text-align: center;
     color: #2cff9a;
+    margin-bottom: 8px;
 }
 
 .subtitle {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     opacity: 0.8;
 }
 
-section {
-    margin-bottom: 15px;
+#questionnaire {
+    display: grid;
+    gap: 20px;
+}
+
+.question-section {
+    padding: 18px;
+    border-radius: 14px;
+    background: rgba(16, 47, 42, 0.6);
+    border: 1px solid rgba(44, 255, 154, 0.2);
 }
 
 h2 {
-    font-size: 1rem;
-    margin-bottom: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
     color: #00b3a4;
 }
 
-select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 8px;
+.question-block {
     border: none;
-    background: #102f2a;
+    margin: 0 0 18px;
+    padding: 0;
+}
+
+.question-block:last-child {
+    margin-bottom: 0;
+}
+
+legend {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
     color: #e8fff8;
+}
+
+.options {
+    display: grid;
+    gap: 10px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(12, 26, 24, 0.7);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, border 0.2s;
+    border: 1px solid transparent;
+}
+
+.option-item:hover {
+    transform: translateY(-2px);
+    border: 1px solid rgba(44, 255, 154, 0.4);
+}
+
+.option-item input {
+    accent-color: #2cff9a;
+}
+
+.points-tag {
+    margin-left: auto;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background: rgba(0, 179, 164, 0.2);
+    color: #b8fff1;
 }
 
 button {
     width: 100%;
-    margin-top: 20px;
-    padding: 12px;
+    margin-top: 24px;
+    padding: 14px;
     border: none;
     border-radius: 10px;
     background: linear-gradient(90deg, #2cff9a, #00b3a4);
@@ -71,7 +123,7 @@ button {
 }
 
 button:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .hidden {
@@ -85,9 +137,31 @@ button:hover {
     margin: 10px 0;
 }
 
+.points {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #b8fff1;
+}
+
 #tips {
     margin-top: 15px;
     background: rgba(0,0,0,0.3);
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
+}
+
+@media (max-width: 720px) {
+    .container {
+        padding: 20px;
+    }
+
+    .option-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .points-tag {
+        margin-left: 0;
+    }
 }
