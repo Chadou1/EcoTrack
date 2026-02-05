@@ -6,61 +6,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header class="hero">
+            <h1>🌱 EcoTrack</h1>
+            <p class="subtitle">Simulateur d’impact écologique des choix quotidiens</p>
+        </header>
 
-<div class="container">
-    <h1>🌱 EcoTrack</h1>
-    <p class="subtitle">Simulateur d’impact écologique des choix quotidiens</p>
+        <main>
+            <section id="intro" class="panel active">
+                <p class="intro-text">
+                    Évaluez votre impact en répondant à 100 questions. Chaque réponse ajoute ou retire des points
+                    pour construire votre score écologique sur 100.
+                </p>
+                <button id="startButton" class="primary-button">Commencer</button>
+            </section>
 
-    <form id="ecoForm">
-        <section>
-            <h2>Transports</h2>
-            <select id="transport">
-                <option value="30">Voiture thermique</option>
-                <option value="15">Transports en commun</option>
-                <option value="5">Vélo / Marche</option>
-                <option value="25">Avion (occasionnel)</option>
-            </select>
-        </section>
+            <section id="questionPanel" class="panel">
+                <div class="progress">
+                    <span id="progressText">Question 1 / 100</span>
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+                </div>
 
-        <section>
-            <h2>Alimentation</h2>
-            <select id="food">
-                <option value="30">Riche en viande</option>
-                <option value="20">Mixte</option>
-                <option value="10">Végétarienne</option>
-            </select>
-        </section>
+                <h2 id="sectionTitle">Section</h2>
+                <h3 id="questionText">Question</h3>
+                <div id="optionsContainer" class="options"></div>
 
-        <section>
-            <h2>Usage numérique</h2>
-            <select id="digital">
-                <option value="20">Streaming vidéo</option>
-                <option value="15">Jeux vidéo</option>
-                <option value="10">Navigation internet</option>
-                <option value="12">Stockage cloud</option>
-            </select>
-        </section>
+                <div class="actions">
+                    <button id="prevButton" class="secondary-button" type="button">Précédent</button>
+                    <button id="nextButton" class="primary-button" type="button">Suivant</button>
+                </div>
+            </section>
 
-        <section>
-            <h2>Logement / Énergie</h2>
-            <select id="energy">
-                <option value="30">Chauffage fossile</option>
-                <option value="20">Électricité standard</option>
-                <option value="10">Énergie renouvelable</option>
-            </select>
-        </section>
-
-        <button type="submit">Calculer mon impact</button>
-    </form>
-
-    <div id="result" class="hidden">
-        <h2>Résultats</h2>
-        <div class="score" id="scoreValue"></div>
-        <p id="interpretation"></p>
-        <div id="tips"></div>
+            <section id="resultPanel" class="panel">
+                <h2>Résultats</h2>
+                <div class="score" id="scoreValue"></div>
+                <p id="interpretation"></p>
+                <div class="points" id="pointsSummary"></div>
+                <div id="tips"></div>
+                <button id="restartButton" class="secondary-button" type="button">Recommencer</button>
+            </section>
+        </main>
     </div>
-</div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
